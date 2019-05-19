@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_contacts) {
             fragment= new KontakFragment();
         } else if (id == R.id.nav_people) {
-
+            fragment = new DataTemanFragment();
         }
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
