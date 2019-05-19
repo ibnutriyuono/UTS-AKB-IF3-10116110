@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_person) {
             fragment = new DataDiriFragment();
         } else if (id == R.id.nav_contacts) {
-
+            fragment= new KontakFragment();
         } else if (id == R.id.nav_people) {
 
         }
