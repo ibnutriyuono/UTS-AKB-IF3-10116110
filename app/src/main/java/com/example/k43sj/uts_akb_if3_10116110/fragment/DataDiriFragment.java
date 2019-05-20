@@ -8,19 +8,20 @@ package com.example.k43sj.uts_akb_if3_10116110.fragment;
  */
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.k43sj.uts_akb_if3_10116110.R;
 
-public class DataTemanFragment extends Fragment {
-    private static final String ARG_DATA = "data";
+import static com.example.k43sj.uts_akb_if3_10116110.R.layout.data_diri_layout;
 
-    public DataTemanFragment(){
+
+public class DataDiriFragment extends Fragment {
+    public DataDiriFragment(){
     }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class DataTemanFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.data_teman_layout, container, false);
+        return inflater.inflate(R.layout.data_diri_layout, container, false);
     }
+
 }

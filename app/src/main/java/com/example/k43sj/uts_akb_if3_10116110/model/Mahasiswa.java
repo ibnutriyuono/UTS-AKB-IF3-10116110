@@ -8,15 +8,21 @@ package com.example.k43sj.uts_akb_if3_10116110.model;
  */
 
 public class Mahasiswa {
+    private int image;
     private String nim,nama,kelas,telephone,email,instagram;
 
-    public Mahasiswa(String nim, String nama, String kelas, String telephone, String email, String instagram){
+    public Mahasiswa(int image, String nim, String nama, String kelas, String telephone, String email, String instagram){
+        this.image = image;
         this.nim = nim;
         this.nama = nama;
         this.kelas = kelas;
         this.telephone = telephone;
         this.email = email;
         this.instagram = instagram;
+    }
+
+    public int getImage() {
+        return image;
     }
 
     public String getNim() {
@@ -41,6 +47,10 @@ public class Mahasiswa {
 
     public String getInstagram() {
         return instagram;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public void setNim(String nim) {
