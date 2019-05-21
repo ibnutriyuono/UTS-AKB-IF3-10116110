@@ -5,139 +5,143 @@
     android:layout_height="match_parent"
     tools:context="com.example.k43sj.uts_akb_if3_10116110.view.KontakFragment">
 
-    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
-        <LinearLayout
+        <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#1C223C"
+            android:scaleType="centerCrop"
+            android:src="@drawable/foto" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_gradient" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="DATA \nDIRI"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="35dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.352" />
 
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="130dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/line_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:layout_constraintVertical_bias="0.0" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_alignParentTop="true"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/foto"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.02" />
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+                app:layout_constraintVertical_bias="0.056" />
 
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="sans-serif"
-                        android:text="Muhamad Ibnu Tri Yuono"
-                        android:textColor="#fff"
-                        android:textSize="22sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.502"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                        app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/telephoneButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="TELEPHONE"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
-                    <TextView
-                        android:id="@+id/textView5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="20dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="sans-serif"
-                        android:text="Pria Prenagen"
-                        android:textColor="#838282"
-                        android:textSize="13sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView4"
-                        app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/emailButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="EMAIL"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/telephoneButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.638" />
 
-                    <TextView
-                        android:id="@+id/Telepon"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="24dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="TELEPON"
-                        android:textColor="#FFF"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.117"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView5"
-                        app:layout_constraintVertical_bias="0.0" />
+            <Button
+                android:id="@+id/instagramButton"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="104dp"
+                android:background="@drawable/buttonstyleithgradient"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="INSTAGRAM"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.558"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailButton"
+                app:layout_constraintVertical_bias="0.0" />
 
-
-                    <TextView
-                        android:id="@+id/Email"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="EMAIL"
-                        android:textColor="#fff"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.094"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Instagram"
-                        app:layout_constraintVertical_bias="0.29" />
-
-
-                    <TextView
-                        android:id="@+id/Instagram"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="INSTAGRAM"
-                        android:textColor="#fff"
-                        android:textSize="20sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.117"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/Telepon"
-                        app:layout_constraintVertical_bias="0.18" />
-
-                </android.support.constraint.ConstraintLayout>
-            </LinearLayout>
-        </LinearLayout>
-    </android.support.design.widget.CoordinatorLayout>
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
 
 </FrameLayout>

@@ -35,8 +35,11 @@ public class DataTemanActivity extends AppCompatActivity{
 
         models = new ArrayList<>();
         models.add(new Mahasiswa(R.drawable.person_dummy, "10116132", "Rafli Rachmawandi","IF-3","08112004240","rafli060392@gmail.com","rafli_rach"));
-        models.add(new Mahasiswa(R.drawable.person_dummy, "10116102", "Mochamad Rizki Ramadhan","IF-3","08222004240","rafli060392@gmail.com","rafli_rach"));
-        models.add(new Mahasiswa(R.drawable.person_dummy, "10116110", "Muhamad Ibnu Tri Yuono","IF-3","081312923780","rafli060392@gmail.com","rafli_rach"));
+        models.add(new Mahasiswa(R.drawable.person_dummy, "10116102", "Mochamad Rizki Ramadhan","IF-3","08222004240","rizkirama46@gmail.com","rizki.gg"));
+        models.add(new Mahasiswa(R.drawable.person_dummy, "10116110", "Muhamad Ibnu Tri Yuono","IF-3","081312923780","ibnutriyuono23@gmail.com","ibnutriyuono"));
+        models.add(new Mahasiswa(R.drawable.person_dummy, "10116110", "Irbah Safira Nunggraeni","IF-3","081312923780","i.safir23@gmail.com","safirairbah"));
+        models.add(new Mahasiswa(R.drawable.person_dummy, "10116110", "Ramon Ivandy Setiawan","IF-3","081312923780","ramonivandy1@gmail.com","ramonivandy"));
+
         findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
