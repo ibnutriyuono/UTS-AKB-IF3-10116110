@@ -7,30 +7,33 @@ package com.example.k43sj.uts_akb_if3_10116110.fragment;
  * IF-3
 */
 
+import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.k43sj.uts_akb_if3_10116110.R;
 
-public class KontakFragment extends Fragment {
-
-    public KontakFragment(){
-    }
+public class KontakFragment extends Fragment{
+    private TextView email,telepon,instagram;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.kontak_layout, container, false);
+        View view =  inflater.inflate(R.layout.kontak_layout, container, false);
 
+        return view;
     }
-
 }

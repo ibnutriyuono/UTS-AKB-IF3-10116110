@@ -29,6 +29,7 @@ public class MahasiswaAdapter extends PagerAdapter {
     private List<Mahasiswa> models;
     private LayoutInflater layoutInflater;
     private Context context;
+    ViewPager viewPager;
 
     public MahasiswaAdapter(List<Mahasiswa> models, Context context) {
         this.models = models;
@@ -73,6 +74,8 @@ public class MahasiswaAdapter extends PagerAdapter {
                 Bundle bundle = new Bundle();
                 Intent intent = new Intent(context, DetailActivity.class);
                 Bundle extras = new Bundle();
+//                String key = String.valueOf(viewPager.getCurrentItem());
+//                extras.putString("key", key);
                 extras.putString("nim",models.get(position).getNim());
                 extras.putString("nama",models.get(position).getNama());
                 extras.putString("telephone",models.get(position).getTelephone());

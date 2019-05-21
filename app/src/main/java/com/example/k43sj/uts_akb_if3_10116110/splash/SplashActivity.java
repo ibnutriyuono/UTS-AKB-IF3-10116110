@@ -12,6 +12,7 @@ import android.os.Bundle;
 
 import com.example.k43sj.uts_akb_if3_10116110.MainActivity;
 import com.example.k43sj.uts_akb_if3_10116110.R;
+import com.example.k43sj.uts_akb_if3_10116110.WelcomeActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this,MainActivity.class));
+                startActivity(new Intent(SplashActivity.this,WelcomeActivity.class));
                 finish();
             }
         },3000);

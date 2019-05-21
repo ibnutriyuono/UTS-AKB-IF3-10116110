@@ -61,13 +61,24 @@ public class DataTemanActivity extends AppCompatActivity{
         findViewById(R.id.fabdelete).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                models.remove(viewPager.getCurrentItem());
+                adapter.notifyDataSetChanged();
+                viewPager = findViewById(R.id.viewPager);
+                viewPager.setAdapter(adapter);
             }
         });
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
         if(extras != null){
-            models.add(new Mahasiswa(R.drawable.person_dummy, extras.getString("nimMasuk"),extras.getString("namaMasuk"),extras.getString("kelasMasuk"),
-                    extras.getString("telephoneMasuk"),extras.getString("emailMasuk"),extras.getString("instagramMasuk")));
+//            Toast.makeText(this,extras.getString("key"),Toast.LENGTH_SHORT).show();
+            String getNim = extras.getString("nimMasuk");
+            String getNama = extras.getString("namaMasuk");
+            String getKelas = extras.getString("kelasMasuk");
+            String getTelepon = extras.getString("telephoneMasuk");
+            String getEmail = extras.getString("emailMasuk");
+            String getInstagram = extras.getString("instagramMasuk");
+            models.add(new Mahasiswa(R.drawable.person_dummy, getNim,getNama,getKelas,
+                    getTelepon,getEmail,getInstagram));
 
         }
 

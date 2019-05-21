@@ -52,13 +52,14 @@ public class DetailActivity extends AppCompatActivity {
         Intent intent = new Intent(DetailActivity.this, DataTemanActivity.class);
         Bundle bundle = new Bundle();
 
-        bundle.putString("nim",nim.getText().toString());
-        bundle.putString("nama",nama.getText().toString());
-        bundle.putString("telephone",telephone.getText().toString());
-        bundle.putString("kelas",kelas.getText().toString());
-        bundle.putString("email",email.getText().toString());
-        bundle.putString("instagram",instagram.getText().toString());
+        bundle.putString("nimEdit",nim.getText().toString());
+        bundle.putString("namaEdit",nama.getText().toString());
+        bundle.putString("telephoneEdit",telephone.getText().toString());
+        bundle.putString("kelasEdit",kelas.getText().toString());
+        bundle.putString("emailEdit",email.getText().toString());
+        bundle.putString("instagramEdit",instagram.getText().toString());
         intent.putExtras(bundle);
+
         startActivity(intent);
     }
 }
