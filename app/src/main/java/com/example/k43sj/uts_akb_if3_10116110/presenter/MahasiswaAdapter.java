@@ -1,4 +1,4 @@
-package com.example.k43sj.uts_akb_if3_10116110.adapter;
+package com.example.k43sj.uts_akb_if3_10116110.presenter;
 
 /*
  * 20 Mei 2019
