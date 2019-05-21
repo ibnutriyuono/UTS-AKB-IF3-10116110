@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.k43sj.uts_akb_if3_10116110.fragment.DataDiriFragment">
+    tools:context="com.example.k43sj.uts_akb_if3_10116110.view.DataDiriFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

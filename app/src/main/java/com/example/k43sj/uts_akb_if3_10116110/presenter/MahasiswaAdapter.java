@@ -29,7 +29,6 @@ public class MahasiswaAdapter extends PagerAdapter {
     private List<Mahasiswa> models;
     private LayoutInflater layoutInflater;
     private Context context;
-    ViewPager viewPager;
 
     public MahasiswaAdapter(List<Mahasiswa> models, Context context) {
         this.models = models;

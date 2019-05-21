@@ -16,7 +16,7 @@ public class PrefManager {
     Context _context;
 
     int PRIVATE_MODE = 0;
-    private static final String PREF_NAME = "androidhive-welcome";
+    private static final String PREF_NAME = "ibnutriyuono";
     private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
 
     public PrefManager(Context context) {

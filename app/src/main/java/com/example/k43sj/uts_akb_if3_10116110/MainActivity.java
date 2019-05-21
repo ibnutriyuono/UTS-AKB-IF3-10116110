@@ -20,8 +20,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.example.k43sj.uts_akb_if3_10116110.fragment.DataDiriFragment;
-import com.example.k43sj.uts_akb_if3_10116110.fragment.KontakFragment;
+import com.example.k43sj.uts_akb_if3_10116110.view.DataDiriFragment;
+import com.example.k43sj.uts_akb_if3_10116110.view.KontakFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

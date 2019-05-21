@@ -1,5 +1,12 @@
 package com.example.k43sj.uts_akb_if3_10116110;
 
+/*
+ * 21 Mei 2019
+ * 10116110
+ * Muhamad Ibnu Tri Yuono
+ * IF-3
+ */
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -67,11 +74,8 @@ public class WelcomeActivity extends AppCompatActivity {
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
                 int current = getItem(+1);
                 if (current < layouts.length) {
-                    // move to next screen
                     viewPager.setCurrentItem(current);
                 } else {
                     launchHomeScreen();
@@ -104,7 +108,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void launchHomeScreen() {
-        prefManager.setFirstTimeLaunch(false);
+//        prefManager.setFirstTimeLaunch(false);
         startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
         finish();
     }
