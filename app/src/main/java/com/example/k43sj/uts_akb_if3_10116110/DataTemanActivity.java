@@ -8,6 +8,7 @@ package com.example.k43sj.uts_akb_if3_10116110;
 */
 
 import android.animation.ArgbEvaluator;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -20,7 +21,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Adapter;
+import android.widget.Toast;
 
 import com.example.k43sj.uts_akb_if3_10116110.adapter.MahasiswaAdapter;
 import com.example.k43sj.uts_akb_if3_10116110.model.Mahasiswa;
@@ -28,8 +31,7 @@ import com.example.k43sj.uts_akb_if3_10116110.model.Mahasiswa;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataTemanActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class DataTemanActivity extends AppCompatActivity{
 
     ViewPager viewPager;
     MahasiswaAdapter adapter;
@@ -41,22 +43,33 @@ public class DataTemanActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data_teman);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Data Teman");
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
 
         models = new ArrayList<>();
         models.add(new Mahasiswa(R.drawable.person_dummy, "10116132", "Rafli Rachmawandi","IF-3","08112004240","rafli060392@gmail.com","rafli_rach"));
         models.add(new Mahasiswa(R.drawable.person_dummy, "10116102", "Mochamad Rizki Ramadhan","IF-3","08222004240","rafli060392@gmail.com","rafli_rach"));
         models.add(new Mahasiswa(R.drawable.person_dummy, "10116110", "Muhamad Ibnu Tri Yuono","IF-3","081312923780","rafli060392@gmail.com","rafli_rach"));
+        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DataTemanActivity.this, TambahDataTeman.class);
+                models.add(new Mahasiswa(R.drawable.person_dummy, "10116110", "Muhamad Ibnu Tri Yuono","IF-3","081312923780","rafli060392@gmail.com","ibnutriyuono"));
+                adapter.notifyDataSetChanged();
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.fabdelete).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
+        Intent intent = getIntent();
+        Bundle extras = intent.getExtras();
+        if(extras != null){
+            models.add(new Mahasiswa(R.drawable.person_dummy, extras.getString("nimMasuk"),extras.getString("namaMasuk"),extras.getString("kelasMasuk"),
+                    extras.getString("telephoneMasuk"),extras.getString("emailMasuk"),extras.getString("instagramMasuk")));
+
+        }
 
         adapter = new MahasiswaAdapter(models, this);
 
@@ -101,64 +114,5 @@ public class DataTemanActivity extends AppCompatActivity
 
             }
         });
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.data_teman, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == R.id.nav_back) {
-            Intent intent = new Intent(DataTemanActivity.this, MainActivity.class);
-            startActivity(intent);
-        }
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 }

@@ -9,8 +9,10 @@ package com.example.k43sj.uts_akb_if3_10116110.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,8 +70,16 @@ public class MahasiswaAdapter extends PagerAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle = new Bundle();
                 Intent intent = new Intent(context, DetailActivity.class);
-                intent.putExtra("param", models.get(position).getNim());
+                Bundle extras = new Bundle();
+                extras.putString("nim",models.get(position).getNim());
+                extras.putString("nama",models.get(position).getNama());
+                extras.putString("telephone",models.get(position).getTelephone());
+                extras.putString("kelas",models.get(position).getKelas());
+                extras.putString("email",models.get(position).getEmail());
+                extras.putString("instagram",models.get(position).getInstagram());
+                intent.putExtras(extras);
                 context.startActivity(intent);
             }
         });
